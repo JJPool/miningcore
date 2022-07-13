@@ -21,9 +21,9 @@ LABEL description="Docker image for miningcore"
 COPY --from=builder /usr/local/miningcore/ /miningcore/
 
 RUN apt update && export DEBIAN_FRONTEND=noninteractive \
-    && apt -y --no-install-recommends install openssl wget libboost-all-dev
+    && apt -y --no-install-recommends install openssl curl libssl-dev libsodium-dev 
 
-HEALTHCHECK  --interval=10s --timeout=10s --start-period=30s \
-  CMD wget --no-verbose --tries=1 --spider http://localhost:4000/api/ || exit 1
+HEALTHCHECK  --interval=10s --timeout=10s --start-period=40s \
+  CMD curl --fail http://localhost:4000/api/pools || exit 1
 
 ENTRYPOINT dotnet /miningcore/Miningcore.dll -c /config.json
