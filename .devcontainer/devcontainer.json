@@ -13,7 +13,13 @@
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
 				"ms-dotnettools.csharp",
-				"cweijan.vscode-postgresql-client2"
+				"cweijan.vscode-postgresql-client2",
+				"ms-azuretools.vscode-docker",
+				"mhutchie.git-graph",
+				"donjayamanne.githistory",
+				"eamodio.gitlens",
+				"GitHub.vscode-pull-request-github",
+				"rangav.vscode-thunder-client"
 			]
 		}
 	},
@@ -46,10 +52,10 @@
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	"postCreateCommand": [
-		"./build-debian-11.sh"
+		"./.devcontainer/build.sh"
 	],
 	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
-	"remoteUser": "vscode",
+	// "remoteUser": "vscode",
 	"features": {
 		"git": "latest",
 		"github-cli": "latest"
