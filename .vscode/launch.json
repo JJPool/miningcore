@@ -11,7 +11,7 @@
             "request": "launch",
             "preLaunchTask": "build",
             "program": "/workspace/miningcore/src/Miningcore/bin/Debug/net6.0/Miningcore.dll",
-            "args": ["-c /workspace/miningcore/src/Miningcore/bin/Debug/net6.0/config.json"],
+            "args": ["-c /workspace/miningcore-ergo-testnet.json"],
             "cwd": "${workspaceFolder}",
             "stopAtEntry": false,
             "console": "internalConsole"
