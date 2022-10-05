@@ -19,7 +19,10 @@
 				"donjayamanne.githistory",
 				"eamodio.gitlens",
 				"GitHub.vscode-pull-request-github",
-				"rangav.vscode-thunder-client"
+				"rangav.vscode-thunder-client",
+				"ms-dotnettools.vscode-dotnet-pack",
+				"ms-dotnettools.dotnet-interactive-vscode",
+				"ms-dotnettools.vscode-dotnet-runtime"
 			]
 		}
 	},
