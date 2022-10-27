@@ -4234,5 +4234,22 @@
         "explorerBlockLink": "https://explorer.ergoplatform.com/en/blocks/$hash$",
         "explorerTxLink": "https://explorer.ergoplatform.com/en/transactions/{0}",
         "explorerAccountLink": "https://explorer.ergoplatform.com/en/addresses/{0}"
+    },
+    "ethereum-classic": {
+        "name": "Ethereum Classic",
+        "canonicalName": "Ethereum Classic",
+        "symbol": "ETC",
+        "family": "ethereum",
+        "website": "",
+        "market": "",
+        "twitter": "",
+        "telegram": "",
+        "discord": "",
+        "explorerBlockLinks": {
+            "block": "https://etcblockexplorer.com/block/$height$",
+            "uncle": "https://etcblockexplorer.com/uncle/$height$"
+        },
+        "explorerTxLink": "https://etcblockexplorer.com/tx/{0}",
+        "explorerAccountLink": "https://etcblockexplorer.com/address/{0}"
     }
 }
