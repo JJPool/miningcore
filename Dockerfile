@@ -37,8 +37,11 @@ RUN apt update
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y \
    apt-transport-https curl dotnet6 libssl-dev pkg-config libboost-all-dev libsodium-dev libzmq5 libzmq3-dev 
 
+EXPOSE 6000/tcp
 EXPOSE 4000-4090
+HEALTHCHECK  --interval=10s --timeout=10s --start-period=40s \
+  CMD curl --fail http://localhost:4000/api/pools || exit 1
 
-ENTRYPOINT ["dotnet","/usr/local/miningcore/Miningcore.dll", "-c","/app/config.json"]
+ENTRYPOINT ["dotnet","/usr/local/miningcore/Miningcore.dll", "-c","/config.json"]
 
 
