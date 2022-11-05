@@ -1,12 +1,13 @@
 #build stage
 FROM mcr.microsoft.com/dotnet/sdk:6.0.301-bullseye-slim-amd64 AS builder
 
-RUN git clone -b dev https://github.com/JJPool/miningcore /miningcore
+RUN apt update && export DEBIAN_FRONTEND=noninteractive \
+    && apt -y --no-install-recommends install git cmake build-essential libssl-dev pkg-config libboost-all-dev libsodium-dev libzmq3-dev libzmq5-dev
 
 WORKDIR /miningcore
-RUN apt update && export DEBIAN_FRONTEND=noninteractive \
-    && apt -y --no-install-recommends install git cmake build-essential libssl-dev pkg-config libboost-all-dev libsodium-dev libzmq3-dev libzmq5-dev \
-&& cd src/Miningcore/ \
+COPY . .
+
+RUN cd src/Miningcore/ \
 && dotnet publish -c Release --framework net6.0 -o ../../build/ \
 && mkdir /usr/local/miningcore/ \
 && cd ../../ \
