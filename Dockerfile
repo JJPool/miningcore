@@ -39,7 +39,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y \
 
 EXPOSE 6000/tcp
 EXPOSE 4000-4090
-HEALTHCHECK --start-period=2m --interval=10s --timeout=10s CMD curl -f http://localhost:4000/api/health-check | grep UP || exit 1
+# HEALTHCHECK --start-period=2m --interval=10s --timeout=10s CMD curl -f http://localhost:4000/api/health-check | grep UP || exit 1
 
 ENTRYPOINT ["dotnet","/usr/local/miningcore/Miningcore.dll", "-c","/config.json"]
 
