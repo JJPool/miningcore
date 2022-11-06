@@ -22,7 +22,7 @@ LABEL description="Docker image for miningcore"
 COPY --from=builder /usr/local/miningcore/ /miningcore/
 
 RUN apt update && export DEBIAN_FRONTEND=noninteractive \
-    && apt -y --no-install-recommends install openssl curl libssl-dev libsodium-dev libzmq5 libzmq3-dev
+    && apt -y --no-install-recommends install apt-transport-https openssl curl libssl-dev pkg-config libboost-all-dev libsodium-dev libzmq5 libzmq3-dev
 
 # HEALTHCHECK --start-period=2m --interval=10s --timeout=10s CMD curl -f http://localhost:4000/api/health-check | grep UP || exit 1
 
