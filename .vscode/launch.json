@@ -1,0 +1,42 @@
+{
+  // Utilisez IntelliSense pour en savoir plus sur les attributs possibles.
+  // Pointez pour afficher la description des attributs existants.
+  // Pour plus d'informations, visitez : https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch main",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      "program": "/workspace/miningcore/src/Miningcore/bin/Debug/net6.0/Miningcore.dll",
+      "args": ["-c /workspace/miningcore-ergo-testnet-main.json"],
+      "cwd": "${workspaceFolder}",
+      "stopAtEntry": false,
+      "console": "internalConsole"
+    },
+    {
+      "name": "Launch relay",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      "program": "/workspace/miningcore/src/Miningcore/bin/Debug/net6.0/Miningcore.dll",
+      "args": ["-c /workspace/miningcore-ergo-testnet-relay.json"],
+      "cwd": "${workspaceFolder}",
+      "stopAtEntry": false,
+      "console": "internalConsole"
+    },
+    {
+      "name": "Launch mono",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      "program": "/workspace/miningcore/src/Miningcore/bin/Debug/net6.0/Miningcore.dll",
+      "args": ["-c /workspace/miningcore-ergo-testnet-mono.json"],
+      "cwd": "${workspaceFolder}",
+      "stopAtEntry": false,
+      "console": "internalConsole"
+    }
+
+  ]
+}
