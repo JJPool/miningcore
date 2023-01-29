@@ -205,6 +205,8 @@ fabric.properties
 .idea
 
 .fake
+
+.fake
 /nbproject/
 /*/*/*/*.a
 /*/*/*/*/*/*/*/*.o
