@@ -206,3 +206,5 @@ fabric.properties
 .idea
 
 .fake
+*.o
+*.a

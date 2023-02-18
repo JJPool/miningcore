@@ -772,7 +772,12 @@
             "string",
             "null"
           ]
-        }
+        },
+        "resolveReplicas": {
+            "type": [
+              "boolean"
+            ]
+          }
       }
     },
     "Statistics": {
