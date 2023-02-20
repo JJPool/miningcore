@@ -947,6 +947,8 @@ public class ShareRelayEndpointConfig
     /// Curve Transport Layer Security Encryption key shared by client and server
     /// </summary>
     public string SharedEncryptionKey { get; set; }
+
+    public bool ResolveReplicas { get; set; }
 }
 
 public class ShareRelayConfig
