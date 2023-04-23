@@ -4,7 +4,6 @@ using System.Reactive.Disposables;
 using System.Reactive.Linq;
 using System.Text;
 using System.Threading.Tasks.Dataflow;
-using System.Net;
 using System.Net.Sockets;
 using Microsoft.Extensions.Hosting;
 using Miningcore.Blockchain;

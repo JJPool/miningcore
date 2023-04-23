@@ -378,8 +378,6 @@ public class EthereumJobManager : JobManagerBase<EthereumJob>
             // create it if necessary
             Directory.CreateDirectory(dagDir);
             
-            var coin = pc.Template.As<EthereumCoinTemplate>();
-
             // setup ethash
             switch(coin.Symbol)
             {
